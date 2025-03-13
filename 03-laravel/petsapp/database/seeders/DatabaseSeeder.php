@@ -14,10 +14,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        //Seeders
         $this->call([
             UserSeeder::class,
             PetSeeder::class,
         ]);     
-        pet::factory(1000)->create();   
+
+        //Factory
+        pet::factory(100)->create();   
+        user::factory(25)->create(); 
     }
 }
