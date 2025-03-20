@@ -18,6 +18,7 @@ class CreatePetsTable extends Migration
             $table->string('breed')->nullable();
             $table->string('location')->nullable();
             $table->text(column: 'description')->nullable();
+            $table->boolean('status')->default(0);
             $table->timestamps();
         });
     }

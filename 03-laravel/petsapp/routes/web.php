@@ -7,6 +7,13 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+//list all user (factory)
+Route::get('show/users', function () {
+    $users = App\Models\user::all();
+    //dd($users->toArray());
+    return view('users-factory')->with('users', $users);
+});
+
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');

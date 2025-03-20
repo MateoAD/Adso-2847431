@@ -19,6 +19,7 @@ class UserSeeder extends Seeder
         $user->fullname = 'John wick';
         $user->gender = 'Male';
         $user->birthdate = '1990-05-15';
+        $user->photo = 'no-image.png';
         $user->phone =  3121234565;
         $user->email = 'john.wick@example.com';
         $user->password = bcrypt('admin');
@@ -31,6 +32,7 @@ class UserSeeder extends Seeder
         $user->fullname = 'Lara bramchan';
         $user->gender = 'Female';
         $user->birthdate = '1999-05-02';
+        $user->photo = 'no-image.png';
         $user->phone =  3121234565;
         $user->email = 'lara@example.com';
         $user->password = bcrypt('12345');

@@ -39,11 +39,11 @@ class UserFactory extends Factory
 
         // Generar una URL de imagen aleatoria
         $photoUrl = 'https://picsum.photos/200/300'; // URL de imagen aleatoria
-        $photoName = 'photos/' . Str::uuid() . '.jpg'; // Nombre único para el archivo
+        $photoName = 'images/' . Str::uuid() . '.jpg'; // Nombre único para el archivo
         $photoPath = public_path($photoName);
 
         // Crear el directorio si no existe
-        if (!file_exists(public_path('photos'))) {
+        if (!file_exists(public_path('images'))) {
             mkdir(public_path('photos'), 0777, true);
         }
 
